@@ -1,31 +1,57 @@
 class Shapes{
     String name;
     void printName(){
-        System.out.println("This is a Shape");
-    }
-    void perimeter(){
-        System.out.println("Perimeter of Shapes");
-    }
-
-    void area(){
-        System.out.println("Area of Shapes");
-    }
+        System.out.println("This is "+ name);
+    }        
 }
 
 class Square extends Shapes{
     int side;
 
-    @Override
-    void perimeter(){
-        System.out.println("Perimeter of Square");
+    public void getSide(int side){
+        this.side = side;
     }
 
-    @Override
-    void area(){
-        System.out.println("Area of Square");
+    public int perimeter(int side){
+        return 4*side;
     }
+
+    public int area(int side){
+        return side*side;
+    } 
 }
 
+class Rectangle extends Shapes{
+    int length;
+    int breadth;
 
+    public void getDimensions(int length, int breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
 
+    public int perimeter(int length, int breadth){
+        return 2*(length + breadth);
+    }
 
+    public int area(int length, int breadth){
+        return length * breadth;
+    } 
+}
+
+class Circle extends Shapes{
+    int radius;
+    static double pi = 3.14;
+
+    public void getRadius(int radius){
+        this.radius = radius;
+    }
+
+    public double perimeter(int radius){
+        return 2 * pi * radius;
+    }
+
+    public double area(int radius){
+        return pi * radius * radius;
+    }
+}
