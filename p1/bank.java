@@ -1,10 +1,10 @@
-class bank {
-    String name;
-    int amount;
+package p1;
+public class bank {
+    public String name;
     private int balance;
     protected double accountNo ;
 
-    public void setBlance(int balance){
+    public void setBalance(int balance){
         this.balance=balance;
     }
 
@@ -13,7 +13,7 @@ class bank {
     }
 
     public void setAccountNo(double accountNo){
-        this.accountNo=accountNo;
+        this.accountNo = accountNo;
     }
 
     public double getAccountNo(){
@@ -25,20 +25,19 @@ class bank {
         System.out.println("Deposited: "+ amount);
     }
 
-    public int withdraw(int amount){
+    public void withdraw(int amount){
         if(amount > balance){
             System.out.println("Insufficient balance");
-            return 0;
+            return;
         }
         balance -= amount;
         System.out.println("Withdrawn: "+ amount);
-        return amount;
     }
 
     public void printDetails(){
         System.out.println("Account Holder Name: "+ name);
         System.out.println("Account Number: "+ accountNo);
-        System.out.println("Account Balance: "+ balance);
+        System.out.println("Account Balance: "+ getBalance());
     }
 
 }
