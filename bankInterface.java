@@ -4,3 +4,8 @@ interface bankInterface {
     double getBalance();
     
 }
+
+interface loanInterface {
+    void applyForLoan(double amount);
+    double getLoanBalance();
+}

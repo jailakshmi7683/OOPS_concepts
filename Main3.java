@@ -6,6 +6,9 @@ public class Main3 {
         myAccount.deposit(500);
         myAccount.withdraw(200);
         System.out.println("Current Balance: " + myAccount.getBalance());
+        
+        loanInterface myLoanAccount = (loanInterface) myAccount;
+        myLoanAccount.applyForLoan(1000);
     }
     
 }
